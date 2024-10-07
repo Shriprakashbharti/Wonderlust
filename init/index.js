@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 const initData=require("./data.js");
 const Listing=require("../models/listing.js");
 
-const MONGO_URL="mongodb+srv://srimjhimku1916:STyqvOVjfs35xelq@wonderlust.zrqim.mongodb.net/?retryWrites=true&w=majority&appName=Wonderlust";
+const MONGO_URL="";
  
 main().then(()=>{
     console.log("Connected to database.");
