@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<div class="row">
+    <div class="col-8 offset-4 mt-4">
+        <div class="login-form-title offset-2"> Login With Us!</div>
+        <form method="post" action="/user/login" novalidate class="needs-validation">
+            <div class="col-md-6 mt-3">
+                <label for="username" class="form-label">Username</label>
+                <input name="username" type="text" class="form-control" id="inputEmail4" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please enter Email.
+                </div>
+              </div>
+              <div class="col-md-6 ">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="inputPassword4" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+                <div class="invalid-feedback">
+                  Please enter a valid password.
+                </div>
+              </div>
+           
+
+                <div class="col-2 mt-3 mb-3 form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                     check me 
+                  </label>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary mt-3 mb-3">Sign in</button>
+                    </div>
+                   <div class="col-4">
+                    <a  class="btn btn-primary mt-3 mb-3" href="/user/register">Sign Up</a>
+                   </div>
+
+                </div>
+            
+          </form>
+    </div>
+</div>

@@ -1,0 +1,123 @@
+<% layout("layouts/boilerplate") %>
+
+<div class="row login-form mt-4 mb-4">
+
+    <div class="col-6 offset-3">
+        <div class="login-form-title offset-2"> Register With Us!</div>
+      <form  method="post" action="/user/register" novalidate class="row g-3 needs-validation" enctype="multipart/form-data">
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input name="user[email]" type="email" class="form-control" id="inputEmail4" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter Email.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input name="user[fullName]" type="text" class="form-control" id="inputEmail4" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter Full Name.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="username" class="form-label">Username</label>
+            <input name="user[username]" type="text" class="form-control" id="username" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter Username.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="password" class="form-label">Password</label>
+            <input name="user[password]" type="password" class="form-control" id="inputPassword4" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter a valid password.
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input name="user[address]" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill address.
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="Avatar" class="form-label">Avatar</label>
+            <input name="user[avatar]" type="file" class="form-control" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please fill the address.
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="city" class="form-label">City</label>
+            <input name="user[city]" type="text" class="form-control" id="inputCity" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please  enter the city.
+            </div>
+          </div>
+          <div class="col-md-4">
+            <label for="country" class="form-label">Country</label>
+            <select name="user[country]" id="inputState" class="form-select" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please choose country.
+              </div>
+              <option selected>INDIA</option>
+              <option>NEPAL</option>
+              <option>NEPAL</option>
+               <option value="">JAPAN</option>
+               <option value="">US</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="zip" class="form-label">Zip</label>
+            <input name="user[zip]" type="text" class="form-control" id="inputZip" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Please enter the zip code.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" required>
+              <label class="form-check-label" for="gridCheck">
+                Agree to terms and conditions
+              </label>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button  class="btn btn-primary offset-4">Sign Up</button>
+          </div>
+        </form>
+  </div>
+  </div>

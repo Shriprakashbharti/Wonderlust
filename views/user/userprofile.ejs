@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="row">
+<% if (user) { %>
+    <div style="height: 100vh;  float: left; background-color: #EDF9FD;" class="col-lg-3 col-sm-6  col-md-4">
+    <div class="p-3">
+        <p class="card-title" style="margin-left: 10px; margin-bottom: 10px;" class="navbar nav-link">
+        
+                <img style="height: 50px; width: 50px; border-radius: 50%;" src="<%= user.avatar.url %>" alt="image"> 
+                @<%= user.username %>
+            </p><hr>
+            <div class="ms-5 p-3">
+                <p>Email: <%= user.email %></p><hr>
+            <p>City: <%= user.city %></p>
+            <hr>
+            <p>Country: <%= user.country %></p>
+            <hr>
+            <a class="nav-link" href="/hoster/details">Become Hoster</a>
+
+            <hr>
+            <a class="nav-link" href="/listings/new">Host Your Home</a>
+            </div>
+        </div>
+
+    </div>
+    <div  class="col-sm-6 col-md-8 col-lg-9 mt-5">
+    
+            
+                <table >
+        
+                    <thead>
+                        <tr>
+                            <th rowspan="1">Title</th>
+                            <th>Price</th>
+                            <th>Update</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>New listing</td>
+                            <td>New listing</td>
+                            <td>New listing</td>
+                            <td>New listing</td>
+                        </tr>
+                    </tbody>
+                </table>
+           
+           
+    </div>
+<% } else { %>
+    <p>User data not available. Please log in.</p>
+<% } %>
+
+</div>

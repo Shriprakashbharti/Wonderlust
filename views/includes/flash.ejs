@@ -1,0 +1,69 @@
+
+<style>
+  /* Flash message container */
+/* Flash message container */
+.flash-message {
+    position: fixed;
+    top: -100px; /* Start off the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    /* background-color: #28a745; Default color for success */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+    z-index: 9999;
+    transition: all 0.5s ease; /* Smooth animation */
+    max-width: 90%; /* For mobile devices */
+    text-align: center;
+}
+
+/* Error message style */
+
+/* Flash message visible state */
+.flash-message.show {
+    top: 20px; /* Drop down into view */
+    
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+    .flash-message {
+        max-width: 400px; /* Limit width for larger screens */
+        padding: 20px 30px;
+        font-size: 15px;
+    }
+}
+
+
+
+</style>
+
+  <% if(success && success.length) {%>
+    <div  class="alert alert-success alert-dismissible flash-message show fade  col-6 offset-3" role="alert">
+    
+        <%= success %>
+        <button type="button" class="btn-close fs-6" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+  <% } %>
+
+
+  <% if(error && error.length) {%>
+    <div class="alert alert-danger alert-dismissible fade flash-message show mt-3 col-6 offset-2" role="alert">
+    
+        <%= error %>
+        <button type="button" class="btn-close fs-6" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+  <% } %>
+
+  <script>
+    function showFlashMessage(msg,type){
+      const flashMessage=document.getElementsByClassName("flash-message");
+      setTimeout(()=>{
+        flashMessage.className="flash-message";
+      },5000);
+    }
+  </script>

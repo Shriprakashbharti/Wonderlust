@@ -1,0 +1,62 @@
+<% layout('/layouts/boilerplate') -%>
+<div class="row mt-4">
+    <div class="col-10 offset-1">
+
+    <h3>Update Listing</h3>
+
+    
+    <form method="post"  action="/listings/<%=listing._id %>?_method=PUT" enctype="multipart/form-data">
+
+        <div class="mb-3"> 
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]"  class="form-control" type="text" value="<%=listing.title %>" >
+        </div>
+
+       
+
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]"  class="form-control" type="text" value="" ><%=listing.description %> </textarea>
+        </div>
+
+       
+        <div class="mb-3">
+            <label for="image" class="form-label">Old Image</label><br>
+         <img  style="height: 150px; width: 250px;" src="<%= listing.image.url %>" class="">
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image</label>
+            <input name="listing[image]" type="file" class="form-control" >
+        </div>
+      
+  <div class="row">
+        <div class="mb-3 col-4">
+            <label for="price" class="form-label">
+                Price
+            </label>
+            <input name="listing[price]" type="number" class="form-control" value="<%=listing.price %>">
+        </div>
+
+       
+        
+
+        <div class="mb-3 col-8">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" type="text" class="form-control" value="<%=listing.location %>">
+        </div>
+
+    </div>
+    
+        <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" type="text" class="form-control" value="<%=listing.country %>">
+        </div>
+
+        
+        <div class="d-grid gap-2 col-6 mx-auto mb-4">
+            <button class="btn btn-danger" >Update</button>
+        </div>
+    </form>
+</div>
+</div>
