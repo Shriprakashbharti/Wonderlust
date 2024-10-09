@@ -1,8 +1,14 @@
 <% layout("/layouts/boilerplate") %>
-
+<style>
+  @media (max-width:720px) {
+.login-form-title{
+  offset: none;
+}
+  }
+</style>
 
 <div class="row">
-    <div class="col-8 offset-4 mt-4">
+    <div class="col-6 offset-3 mt-4">
         <div class="login-form-title offset-2"> Login With Us!</div>
         <form method="post" action="/user/login" novalidate class="needs-validation">
             <div class="col-md-6 mt-3">
@@ -33,15 +39,14 @@
                      check me 
                   </label>
                 </div>
-                <div class="row">
-                    <div class="col-4">
+              
+                    <div class="col-md-6">
                         <button type="submit" class="btn btn-primary mt-3 mb-3">Sign in</button>
                     </div>
-                   <div class="col-4">
-                    <a  class="btn btn-primary mt-3 mb-3" href="/user/register">Sign Up</a>
-                   </div>
+                   
+                   <P>Don't have an account! /<a  href="/user/register">Sign Up</a></P> 
+                   
 
-                </div>
             
           </form>
     </div>

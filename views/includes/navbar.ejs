@@ -1,7 +1,8 @@
 
 <style>
 .dropdown-menu{
-  width: 200px;
+  width: 300px;
+  height: auto;
   margin-top: 20px !important;
   box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.2) , 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -24,6 +25,19 @@
 .me-2{
   border-radius: 25px;
 }
+
+
+@media (max-width:720px) {
+  .media{
+    display: none !important;
+  }
+}
+
+@media (min-width:720px) {
+  .x-media{
+    display: none;
+  }
+}
 </style>
 <nav class="navbar navbar-expand bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
@@ -34,7 +48,7 @@
 
             <a class="nav-link" href="/listings/new">Wonderlust your home</a>
         </div>
-<div class="navbar-nav ms-auto">
+<div class="navbar-nav media ms-auto">
   <form class="d-flex" role="search">
     <input class="form-control me-2" type="search" placeholder="Search destination" aria-label="Search">
     <button class="btn search-btn" type="submit"><i class="fa-brands fa-searchengin"></i>search</button>
@@ -51,10 +65,24 @@
               <li><a class="dropdown-item" href="/user/login">Login</a></li>
               <li><a class="dropdown-item" href="/user/register">Sign Up</a></li>
               <hr>
+              <div class="navbar-nav x-media ms-auto">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search destination" aria-label="Search">
+                  <button class="btn search-btn" type="submit"><i class="fa-brands fa-searchengin"></i>search</button>
+                 
+                </form>
+              </div>
               <a class="nav-link" href="/listings/new">Wonderlust your home</a>
               <% } %>
               <% if(currUser) {%>
               <li><a class="dropdown-item" href="/user/profile">Profile</a></li>
+              <div class="navbar-nav x-media ms-auto">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search destination" aria-label="Search">
+                  <button class="btn search-btn" type="submit"><i class="fa-brands fa-searchengin"></i>search</button>
+                 
+                </form>
+              </div>
               <li><hr class="dropdown-divider"></li>
               <a class="dropdown-item" href="/user/logout">Logout</a>
               <% } %>
